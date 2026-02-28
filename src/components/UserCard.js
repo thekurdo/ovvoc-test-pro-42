@@ -7,7 +7,7 @@ const { useSelector, useDispatch } = require('react-redux');
 const { setTheme, toggleAutoUpdate } = require('../store/userSlice');
 
 // React.forwardRef pattern — unnecessary in React 19 (ref becomes a regular prop)
-const UserCard = React.forwardRef(function UserCard(props, ref) {
+const UserCard = /* TODO: forwardRef is no longer needed in React 19 - ref is a regular prop */function UserCard(props, ref) {
   const { showEmail, showPlan, className } = props;
 
   // react-redux hooks (these work across versions)
